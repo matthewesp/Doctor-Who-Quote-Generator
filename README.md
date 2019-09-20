@@ -1,6 +1,6 @@
 # Doctor-Who-Quote-Generator
 
-Simple little project that generates 1 of 20 different Doctor Who quotes. Done just because it was fun.
+Simple little project that generates 1 of 30 different Doctor Who quotes. Done just because it was fun.
 
 It was done using the Create React App and a Dummy Data Jason file.
 
