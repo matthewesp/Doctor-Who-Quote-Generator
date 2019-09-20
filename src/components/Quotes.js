@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import DrWhoQuotes from "../assets/DrWhoQuotes.json";
 import QuoteBox from "./QuoteBox.js";
 import "./QuoteBox.css";
@@ -19,7 +18,7 @@ export default class Quotes extends Component {
 newNumber() {
     let randomNum = Math.floor(Math.random() * this.state.data.length);
 
-    if(randomNum == this.state.number) {
+    if(randomNum === this.state.number) {
         randomNum += 1
     };
 
@@ -31,7 +30,6 @@ newNumber() {
             quote: this.state.data[this.state.number]
         });
     } else {
-        console.log("No button has been pressed yet.")
     };
 }
 
@@ -51,6 +49,7 @@ tweeter(){
                         quote={this.state.quote.quote} 
                         author={this.state.quote.name} 
                         episode={this.state.quote.episode}
+                        ename={this.state.quote.eName}
                     id="quote-box" /> : <div className="box-sizing"><p className="v-align">Click Below to get a Quote from Doctor Who</p></div>
                 }
                 <div className="wrapper">
