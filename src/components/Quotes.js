@@ -35,7 +35,7 @@ newNumber() {
 
 tweeter(){
     
-    window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fdoctorwho.xyz&text='+ '\"' + this.state.quote.quote + '\"' + '\t -' + this.state.quote.name + '&hashtags=DoctorWhoXYZ', 
+    window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fdoctorwho.xyz&text="' + this.state.quote.quote + '"\t -' + this.state.quote.name + '&hashtags=DoctorWhoXYZ', 
                          'newwindow', 
                          'width=300,height=250'); 
               return false;
