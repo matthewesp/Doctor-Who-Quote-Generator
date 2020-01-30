@@ -7,6 +7,7 @@ export default class Quotes extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            // Stores the quote into state allowing it pull data as needed
             data: DrWhoQuotes,
             number: "",
             quote: ""
@@ -14,7 +15,7 @@ export default class Quotes extends Component {
         this.newNumber = this.newNumber.bind(this);
         this.tweeter = this.tweeter.bind(this);
     }
-    
+// Gets a Number generated randomly and allows you to pull a quote from the data provided.
 newNumber() {
     let randomNum = Math.floor(Math.random() * this.state.data.length);
 
@@ -33,8 +34,8 @@ newNumber() {
     };
 }
 
+// Opens a new tab allowing you to tweet out the quote needed. 
 tweeter(){
-    
     window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fdoctorwho.xyz&text="' + this.state.quote.quote + '"\t -' + this.state.quote.name + '&hashtags=DoctorWhoXYZ', 
                          'newwindow', 
                          'width=300,height=250'); 

@@ -11,7 +11,14 @@ function App() {
         <h1 className="center-text">Doctor Who Quote Generator</h1>
       </div>
       <Quotes />
-      <div className="footer"><sub>This is demonstrating <a href="https://www.techstratt.com/">Techstratt's</a> new Doctor Who RESTful API. For more information <a href="#">click here</a></sub></div>
+      <div className="footer">
+        <sub>
+          This is was a project by 
+          <a href="https://www.techstratt.com/">Matthew Esparza</a> Check out my
+          github 
+          <a href="https://github.com/matthewesp">right here</a>
+        </sub>
+      </div>
     </div>
   );
 }
