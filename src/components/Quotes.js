@@ -26,9 +26,9 @@ newNumber() {
     this.setState({
         number: randomNum
     })
-    if (this.state.number) {
+    if (randomNum) {
         this.setState({
-            quote: this.state.data[this.state.number]
+            quote: this.state.data[randomNum]
         });
     } else {
     };
