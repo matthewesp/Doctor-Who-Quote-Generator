@@ -1,22 +1,42 @@
 import React from 'react';
 import './App.css';
-import Quotes from './components/Quotes.js';
-import Logo from "./assets/images/tardis.svg"
+import Quotes from './components/QuoteBox/Quotes.js';
+import Footer from  './components/Footer/Footer';
+import Paths from './components/Nav/Paths';
+import Logo from "./components/Nav/Nav";
+import Error404 from "./components/Errors/Error404";
+import Moments from "./components/Moments/Moments";
+import MomentVideo from "./components/Moments/MomentVideo"
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="no-of">
-      <div className="title">
-        <img src={Logo} alt="tardis" className="logo rotate-vert-center" />
-        <h1 className="center-text">Doctor Who Quote Generator</h1>
+    <Router>
+      <div>
+        <div className="no-of">
+          <Logo />
+          {/* Switch for React Router */}
+          <Switch>
+            <Route exact path="/">
+              <Paths />
+            </Route>
+            <Route path="/quote">
+              <Quotes />
+            </Route>
+            <Route exact path="/moments">
+              <Moments />
+            </Route>
+            {/* With Parameters */}
+            <Route path="/moments/:id" component={MomentVideo} />
+            <Route path="*">
+              <Error404 />
+            </Route>
+          </Switch>
+          {/* End Switch */}
+          <Footer />
+        </div>
       </div>
-      <Quotes />
-      <div className="footer">
-        <sub>
-          This is was a project by <a href="https://www.techstratt.com/">Matthew Esparza</a> Check out my github <a href="https://github.com/matthewesp">right here</a>
-        </sub>
-      </div>
-    </div>
+    </Router>
   );
 }
 

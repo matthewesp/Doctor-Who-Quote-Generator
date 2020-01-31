@@ -1,0 +1,57 @@
+.container {
+  margin: 0 10% 0 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 0 5% 0 5%;
+  }
+}
+
+
+.thumbnail{
+    width: auto;
+    height: 188px;
+    margin: auto;
+    border-radius: 3px;
+}
+.titleText{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.modelCard {
+    width: 100%;
+    background-color: lightgray;
+    box-shadow: 0 3px 3px #454545;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px gray solid;
+}
+
+.modelCard:hover {
+  width: 100%;
+  background-color: gray;
+  box-shadow: 0 5px 5px #272727;
+  padding: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vidContainer {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.video{
+    width: 100%;
+    height: 36vh;
+}
+.titleText{
+    font-size: 1rem;
+    font-weight: 300;
+}
+a:-webkit-any-link {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}

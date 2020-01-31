@@ -6,11 +6,14 @@
 .title{
   width: 80%;
   margin: 15px auto 15px auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+
 }
 
 .no-of {
   overflow: hidden;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .logo {
